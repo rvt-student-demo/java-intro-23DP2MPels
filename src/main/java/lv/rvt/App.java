@@ -1,11 +1,18 @@
-package lv.rvt;
+package lv.rvt; // klases atrašanas vieta projektā
 
-public class App 
+import java.util.Scanner;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("Hello RVT");
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ievadiet savu vādru");
+        
+        String name = scanner.nextLine();
 
+        System.out.println("Sveiki, " + name + "!");
     }
 
 }
