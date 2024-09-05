@@ -8,11 +8,15 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Ievadiet savu vādru");
-        
-        String name = scanner.nextLine();
+        // Mēs gribam uzzināt no lietotaā: Vārdu Uzvārdu un grupu
+        System.out.println("Uzraksties savu vārdu");
+        String vards = scanner.nextLine();
+        System.out.println("Uzraksties savu vārdu");
+        String uzvards = scanner.nextLine();
+        System.out.println("Uzraksties savu vārdu");
+        String grupa = scanner.nextLine();
 
-        System.out.println("Sveiki, " + name + "!");
-    }
+        System.out.println(vards+", "+uzvards+", "+grupa);
 
-}
+    }      
+} 
