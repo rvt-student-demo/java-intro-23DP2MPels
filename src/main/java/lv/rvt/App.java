@@ -1,26 +1,24 @@
 package lv.rvt; // klases atrašanas vieta projektā
+import java.util.*;
 
 public class App
 {
     public static void main( String[] args )
     {
+        Scanner scanner = new Scanner(System.in);
 
-        String text = "None!";
-        int chicken = 3;
-        double becon = 5.5;
+        System.out.println("Ievadiet savu vārdu");
 
-        System.out.println("Chicken:");
-        System.out.println(chicken);
-        System.out.println("Becon (kg):");
-        System.out.println(becon);
-        System.out.println("Tractor:");
-        System.out.println(text);
+        String name = scanner.nextLine();
 
-        System.out.println("And finally, a summary:");
-        System.out.println(chicken);
-        System.out.println(becon);
-        System.out.println(text);
+        System.out.println("Ievadiet savu uzvārdu");
 
+        String lastname = scanner.nextLine();
 
+        System.out.println("Ievadiet savu grupas numuru");
+
+        String group = scanner.nextLine();
+
+        System.out.println("Students: " + name + " " + lastname + ", grupa: " + group);
     }      
 } 
