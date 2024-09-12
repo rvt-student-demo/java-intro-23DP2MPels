@@ -7,18 +7,17 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ievadiet savu vārdu");
+        System.out.println("Give the first number:");
 
-        String name = scanner.nextLine();
+        int InputFirst = Integer.valueOf(scanner.nextLine());
+        
+        System.out.println("Give the second number:");
 
-        System.out.println("Ievadiet savu uzvārdu");
+        int InputSecond = Integer.valueOf(scanner.nextLine());
 
-        String lastname = scanner.nextLine();
+        int Answer = (InputFirst + InputSecond);
 
-        System.out.println("Ievadiet savu grupas numuru");
+        System.out.println(InputFirst + " + " + InputSecond + " = " + Answer);
 
-        String group = scanner.nextLine();
-
-        System.out.println("Students: " + name + " " + lastname + ", grupa: " + group);
     }      
 } 
