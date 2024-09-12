@@ -15,9 +15,10 @@ public class App
 
         int InputSecond = Integer.valueOf(scanner.nextLine());
 
-        int Answer = (InputFirst + InputSecond);
-
-        System.out.println(InputFirst + " + " + InputSecond + " = " + Answer);
+        System.out.println(InputFirst + " + " + InputSecond + " = " + (InputFirst + InputSecond));
+        System.out.println(InputFirst + " - " + InputSecond + " = " + (InputFirst - InputSecond));
+        System.out.println(InputFirst + " * " + InputSecond + " = " + (InputFirst * InputSecond));
+        System.out.println(InputFirst + " / " + InputSecond + " = " + (double) InputFirst / InputSecond);
 
     }      
 } 
