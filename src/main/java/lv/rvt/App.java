@@ -14,12 +14,23 @@ public class App
             int number = Integer.valueOf(scanner.nextLine());
 
             if (number == 0) {
-                System.out.println("Skaitļu vidējais aritmētiskais: "+((double)videjais/(double)ciparu_skaits));
-                break;
-            }
+                if (ciparu_skaits == 0) {
+                    System.out.println("Nevar izreiķināt vidējo");
+                    break;
+                }
+                else {
+                    System.out.println("Pozitivu skaitļu vidējais aritmētiskais: "+((double)videjais/(double)ciparu_skaits));
+                    break;
+                }
+            }   
             else {
-                ciparu_skaits = ciparu_skaits + 1;
-                videjais = videjais + number;
+                if (number > 0) {
+                    ciparu_skaits = ciparu_skaits + 1;
+                    videjais = videjais + number;
+                }
+                else {
+                    continue;
+                }
             }
         }
     }
