@@ -8,10 +8,12 @@ public class App
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ierakstiet skaitli.");
-        int reiz = Integer.valueOf(scanner.nextLine());
+        int factorials = Integer.valueOf(scanner.nextLine());
+        int facSumma = 1;
 
-        for (int i = reiz; i <= 100; i++) {
-            System.out.println(i);
+        for (int i = 1; i <= factorials; i++) {
+            facSumma = facSumma * i;
         }
+        System.out.println(facSumma);
     }
 }
