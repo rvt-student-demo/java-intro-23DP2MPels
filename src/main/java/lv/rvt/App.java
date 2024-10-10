@@ -4,31 +4,24 @@ import java.util.*;
 public class App
 {
     public static void main(String[] args) {
-        Stars.printStars(5);
-        System.out.println("");
-        Stars.printStars(3);
-        System.out.println("");
-        Stars.printStars(9);
-        System.out.println("");
 
-        System.out.println("");
+        Scanner scanner = new Scanner(System.in);
+        String input = ("");
+        ArrayList<String> strList = new ArrayList<>();
+        int index = 1;
 
-        Stars.printSquare(4);
+        while (true) {
+            if(index == 0) {
+                break;
+            }
+            else {
+                input = (scanner.nextLine());
+                strList.add(input);
+                index = input.compareTo("");
+            }
+        }
 
-        System.out.println("");
+        System.out.println(strList.get(2));
 
-        Stars.printRectangle(17, 3);
-
-        System.out.println("");
-
-        Stars.printTriangle(4);
-
-        System.out.println("");
-
-        Stars.printTriangleMirror(4);
-
-        System.out.println("");
-
-        Stars.christmasTree(10);
     } 
 }
