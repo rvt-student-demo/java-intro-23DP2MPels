@@ -3,25 +3,29 @@ import java.util.*;
 
 public class App
 {
-    public static void main(String[] args) {
+    public static void main( String[] args )
+    {
+        ArrayList<Integer> summa = new ArrayList<>();
 
-        Scanner scanner = new Scanner(System.in);
-        String input = ("");
-        ArrayList<String> strList = new ArrayList<>();
-        int index = 1;
-
+        int a = 0;
+        int sumbla = 0;
         while (true) {
-            if(index == 0) {
+            Scanner scanner = new Scanner(System.in);
+
+            int number = Integer.valueOf(scanner.nextLine());
+
+            if (number == 0) {
                 break;
             }
-            else {
-                input = (scanner.nextLine());
-                strList.add(input);
-                index = input.compareTo("");
-            }
-        }
 
-        System.out.println(strList.get(2));
+            summa.add(number);
+            sumbla = sumbla + summa.get(a);
+            a=a+1;
+
+        }  
+        System.out.println(summa);
+        System.out.println(summa.get(1)+summa.get(2));
+        System.out.println(sumbla);
 
     } 
 }
