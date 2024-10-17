@@ -16,19 +16,24 @@ public class App
         System.out.println("You must guess what it is in three tries.");
         System.out.println("Enter a guess:");
 
-        System.out.println(val);
-
         for(i=0 ; i < 3 ; i++) {
 
             int userInput = scanner.nextInt();
 
-            if (val == userInput) {
+            if (userInput == val) {
                 System.out.println("Right!");
-                break;
+                    break;
             }
-            else {
-                System.out.println("WRONG!");
+            else if (userInput == val+1 || userInput == val-1) {
+                System.out.println("hot!");
             }
+            else if (userInput == val+2 || userInput == val-2) {
+                System.out.println("Warm");
+            }
+            else{
+                System.out.println("Cold");
+            }
+
         }
         if(i < 3) {
             System.out.println("You have won the game!");
