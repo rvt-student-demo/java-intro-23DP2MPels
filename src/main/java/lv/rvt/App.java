@@ -5,68 +5,24 @@ public class App
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-    
-        Random rand = new Random();
+        Account myAccount = new Account("My account", 0.00);
+        Account matthewsAccount = new Account("Matthew's account", 1000.00);
 
-        int i = 0;
-        int won_round = 0;
+        System.out.println("Initial state");
+        System.out.println(myAccount);
+        System.out.println(matthewsAccount);
 
-        for(int roundi=1 ; roundi < 11 ; roundi++) {
+        System.out.println("");
 
-            int val = rand.nextInt(1,11);
+        myAccount.deposit(100);
+        matthewsAccount.withdrawal(100);
+        System.out.println("The balance of MY account is now: " + myAccount.balance());
+        System.out.println("The balance of Matthews account is now: " + matthewsAccount.balance());
 
-            System.out.println("\nRound "+roundi+":");
+        System.out.println("");
 
-            System.out.println("\nI am thinking of a number from 1 to 10. ");
-            System.out.println("You must guess what it is in three tries.");
-            System.out.println("Enter a guess:");
-
-            for(i=0 ; i < 3 ; i++) {
-
-                int userInput = scanner.nextInt();
-
-                if (userInput == val) {
-                    System.out.println("Right!");
-                    won_round = won_round + 1;
-                    break;
-                }
-                else if (userInput == val+1 || userInput == val-1) {
-                    System.out.println("hot!");
-                }
-                else if (userInput == val+2 || userInput == val-2) {
-                    System.out.println("Warm");
-                }
-                else{
-                    System.out.println("Cold");
-                }
-            }
-
-            if(i >= 3) {
-                System.out.println("The correct number was "+val);
-            }
-
-            System.out.println("You have won "+won_round+" out of "+roundi+" rounds.");
-
-
-        }
-
-        switch (won_round) {
-            case 8:
-                System.out.println("Your rating: amateur.");
-                break;
-            case 9:
-                System.out.println("Your rating: professionals.");
-                break;
-            case 10:
-                System.out.println("Your rating: hackers.");
-                break;
-            default:
-                System.out.println("Your rating: amateurs.");
-                break;
-        }
-
-        
-
+        System.out.println("End state");
+        System.out.println(myAccount);
+        System.out.println(matthewsAccount);
     } 
 }
