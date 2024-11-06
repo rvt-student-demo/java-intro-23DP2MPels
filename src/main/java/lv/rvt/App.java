@@ -4,16 +4,13 @@ import java.util.*;
 public class App
 {
     public static void main( String[] args ) {
-        Person matti = new Person("Matti");
-        Person juhana = new Person("Juhana");
 
-        matti.setHeight(180);
-        matti.setWeight(86);
+        Agent bond = new Agent("James", "Bond");
 
-        juhana.setHeight(175);
-        juhana.setWeight(64);
+        bond.toString(); // prints nothing
+        System.out.println(bond);
 
-        System.out.println(matti.getName() + ", body mass index is " + matti.bodyMassIndex());
-        System.out.println(juhana.getName() + ", body mass index is " + juhana.bodyMassIndex());
+        Agent ionic = new Agent("Ionic", "Bond");
+        System.out.println(ionic);
     }
 }
