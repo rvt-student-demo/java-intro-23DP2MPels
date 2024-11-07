@@ -3,23 +3,23 @@ import java.util.*;
 
 public class App
 {
-    public static void main( String[] args ) {
-        Statistics statistics = new Statistics();
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
 
-        System.out.println("Enter number:");
-        while (true) {
-            int i = Integer.valueOf(scanner.nextLine());
-            if (i == -1) {
-                break;
-            }
-            statistics.addNumber(i);
-        }
-        System.out.println("Count: " + statistics.getCount());
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Average: " + statistics.average());
-        System.out.println("Sum of even numbers: " + statistics.evenCount());
-        System.out.println("Sum of odd numbers: " + statistics.oddCount());
-
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matts: " + mattsCard);
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matts: " + mattsCard);
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println("Paul: " + paulsCard);
+        System.out.println("Matts: " + mattsCard);
+        
     }
-}
+} 
