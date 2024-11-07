@@ -6,13 +6,13 @@ public class Agent {
     public String lastname;
 
     public Agent(String initialName, String initiallastname) {
-        name = initialName;
-        lastname = initiallastname;
+        this.name = initialName;
+        this.lastname = initiallastname;
 
     }
 
     public String toString() {
-        return "My name is " + name + ", " + name + " " + lastname;
+        return "My name is " + this.name + ", " + this.name + " " + this.lastname;
     }
 
 }
