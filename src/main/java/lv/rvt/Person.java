@@ -56,4 +56,10 @@ public class Person {
         return this.name + ", age " + this.age + " years, my body mass index is " + bodyMassIndex();
     }
 
+    public String toCsvRow(Person person3) {
+        
+        return this.name + ", " + this.age ;
+        
+    }
+
 }

@@ -1,6 +1,8 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class PersonManager {
@@ -29,5 +31,21 @@ public class PersonManager {
         return personList;
     }
     
+    public static void addPerson(String person1) throws Exception{
+
+        BufferedWriter writer = Helper.getWriter("data.csv", StandardOpenOption.APPEND);
+
+        String[] parts = person1.split(", ");
+            //System.out.println("Name: " + parts[0]);
+
+            int age_m = Integer.parseInt(parts[1]);
+
+            Person person = new Person(parts[0], age_m, 0, 0);
+        
+        writer.write(person.toCsvRow(person));
+        writer.newLine();
+        writer.close();
+        
+    }
 
 }
