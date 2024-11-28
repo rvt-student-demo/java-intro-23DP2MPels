@@ -16,6 +16,15 @@ public class Person {
     public Person(String initialName,int initialAge) {
         this.age = initialAge;
         this.name = initialName;
+        this.weight = 0;
+        this.height = 0;
+    }
+
+    public Person(String name) {
+        this.name = name;
+        this.age = 0;
+        this.weight = 0;
+        this.height = 0;
     }
 
     public void setHeight(int newHeight) {
