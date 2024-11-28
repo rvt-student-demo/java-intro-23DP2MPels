@@ -40,7 +40,7 @@ public class PersonManager {
 
             int age_m = Integer.parseInt(parts[1]);
 
-            Person person = new Person(parts[0], age_m, 0, 0);
+            Person person = new Person(parts[0], age_m);
         
         writer.write(person.toCsvRow(person));
         writer.newLine();

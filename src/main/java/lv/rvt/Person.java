@@ -13,6 +13,11 @@ public class Person {
         this.name = initialName;
     }
 
+    public Person(String initialName,int initialAge) {
+        this.age = initialAge;
+        this.name = initialName;
+    }
+
     public void setHeight(int newHeight) {
         this.height = newHeight;
     }
@@ -56,7 +61,7 @@ public class Person {
         return this.name + ", age " + this.age + " years, my body mass index is " + bodyMassIndex();
     }
 
-    public String toCsvRow(Person person3) {
+    public String toCsvRow(Person person) {
         
         return this.name + ", " + this.age ;
         
