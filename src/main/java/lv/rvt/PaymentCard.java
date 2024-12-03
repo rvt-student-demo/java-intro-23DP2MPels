@@ -12,26 +12,21 @@ public class PaymentCard {
         return "The card has a balance of " + this.balance + " euros";
     }
 
-    public void eatAffordably() {
-        if (this.balance >= 2.60) {
-            this.balance = this.balance - 2.60;
-        }
+    public double balance() {
+        return this.balance;
     }
 
-    public void eatHeartily() {
-        if (this.balance >= 4.60) {
-            this.balance = this.balance - 4.60;
-        }
+    public void addMoney(double increase) {
+        this.balance = this.balance + increase;
     }
 
-    public void addMoney(double k) {
-        if (this.balance < 150 && k >= 0) {
-            this.balance = this.balance + k;
-            if (this.balance >= 150) {
-                this.balance = 150;
-            }
+    public boolean takeMoney(double amount) {
+        if (this.balance >= amount) {
+            this.balance = this.balance - amount;
+            return true;
+        }
+        else {
+            return false;
         }
     }
-
-    
 }

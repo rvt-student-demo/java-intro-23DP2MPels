@@ -6,25 +6,23 @@ public class App
 {
     public static void main(String[] args) {
 
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
+        PaymentTerminal unicafeExactum = new PaymentTerminal();
+        System.out.println(unicafeExactum);
 
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        PaymentCard annesCard = new PaymentCard(2);
 
+        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
 
-        System.out.println();
+        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
 
-        
-        Counter books = new Counter(20);
-        Counter soldBooks = new Counter();
+        unicafeExactum.addMoneyToCard(annesCard, 100);
 
-        books.decrease(5);
-        soldBooks.increase(5);
+        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        System.out.println("there was enough money: " + wasSuccessful);
 
-        System.out.println(books.value());
-        System.out.println(soldBooks.value());
+        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+
+        System.out.println(unicafeExactum);
     }
 } 
