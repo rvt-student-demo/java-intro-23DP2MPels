@@ -6,31 +6,25 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception{
-        
-        Person matt = new Person("Matt");
-        matt.setWeight(86);
-        matt.setHeight(180);
+    public static void main(String[] args) {
 
-        Person jasper = new Person("Jasper");
-        jasper.setWeight(34);
-        jasper.setHeight(132);
-
-        AmusementParkRide waterTrack = new AmusementParkRide("Water track", 140);
-
-        if (waterTrack.allowedToRide(matt)) {
-            System.out.println(matt.getName() + " may enter the ride");
-        } else {
-            System.out.println(matt.getName() + " may not enter the ride");
-        }
-
-        if (waterTrack.allowedToRide(jasper)) {
-            System.out.println(jasper.getName() + " may enter the ride");
-        } else {
-            System.out.println(jasper.getName() + " may not enter the ride");
-        }
-
-        System.out.println(waterTrack);
-
+        HealthStation childrensHospital = new HealthStation();
+    
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+    
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+    
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+    
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+    
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+    
+        System.out.println("weighings performed: " + childrensHospital.weighings());
     }
 }
