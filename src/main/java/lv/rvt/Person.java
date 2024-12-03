@@ -27,6 +27,18 @@ public class Person {
         this.height = 0;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
     public void setHeight(int newHeight) {
         this.height = newHeight;
     }
@@ -45,9 +57,7 @@ public class Person {
     }
 
     public void growOlder() {
-        if (this.age < 30) {
-            this.age = this.age + 1;
-        }
+        this.age = this.age + 1;
     }
 
     public int returnAge() {
@@ -62,12 +72,8 @@ public class Person {
         return true;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
     public String toString() {
-        return this.name + ", age " + this.age + " years, my body mass index is " + bodyMassIndex();
+        return this.name + ", age " + this.age + " years";
     }
 
     public String toCsvRow(Person person) {
