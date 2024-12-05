@@ -1,7 +1,7 @@
 package lv.rvt;
 
 public class Person {
-    private String name;
+    private String name = "Jānis";
     private int age;
     private int weight;
     private int height;
@@ -80,9 +80,8 @@ public class Person {
         return this.name + ", age " + this.age + " years";
     }
 
-    public String toCsvRow(Person person) {
-        
-        return this.name + ", " + this.age ;
+    public String toCsvRow() {
+        return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
         
     }
 

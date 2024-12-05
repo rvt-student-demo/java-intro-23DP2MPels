@@ -25,8 +25,6 @@ public class PaymentCard {
             this.balance = this.balance - amount;
             return true;
         }
-        else {
-            return false;
-        }
+        return false;
     }
 }

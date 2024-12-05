@@ -31,18 +31,10 @@ public class PersonManager {
         return personList;
     }
     
-    public static void addPerson(String person1) throws Exception{
+    public static void addPerson(Person person) throws Exception{
 
-        BufferedWriter writer = Helper.getWriter("data.csv", StandardOpenOption.APPEND);
-
-        String[] parts = person1.split(", ");
-            //System.out.println("Name: " + parts[0]);
-
-            int age_m = Integer.parseInt(parts[1]);
-
-            Person person = new Person(parts[0], age_m);
-        
-        writer.write(person.toCsvRow(person));
+        BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
+        writer.write(person.toCsvRow());
         writer.newLine();
         writer.close();
         
