@@ -28,7 +28,7 @@ public class Main {
                     System.out.println("exit : aptur programmas darbību");
                     break;
                 case "show":
-                    System.out.println(PersonManager.getPersonList());
+                    PersonManager.getPersonList();
                     break;
                 case "add":
                     System.out.println("Ierakstiet personas Vārdu");

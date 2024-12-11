@@ -51,9 +51,9 @@ public class Person {
         this.weight = newWeight;
     }
 
-    public double bodyMassIndex() {
-        double heigthPerHundred = this.height / 100.0;
-        return this.weight / (heigthPerHundred * heigthPerHundred);
+    public static double bodyMassIndex(Person person) {
+        double heigthPerHundred = person.height / 100.0;
+        return person.weight / (heigthPerHundred * heigthPerHundred);
     }
 
     public void printPerson() {
