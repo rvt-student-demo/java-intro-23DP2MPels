@@ -1,6 +1,40 @@
 package lv.rvt;
 import java.util.Scanner;
 
+import lv.rvt.Packable;
+import lv.rvt.StatisticsInterface;
+
+public class Statistics implements StatisticsInterface{
+
+    @Override
+    public double minValue() {
+
+    }
+
+    @Override
+    public double minValue() {
+
+    }
+
+    @Override
+    public double averageValue() { 
+    
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public class Statistics {
     private int count = 0;
     private int sum = 0;
@@ -42,3 +76,4 @@ public class Statistics {
         return (double) this.sum/this.count; 
     }
 }
+ */
