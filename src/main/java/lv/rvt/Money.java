@@ -26,9 +26,15 @@ public class Money {
         return euros + "." + zero + cents + "e";
     }
     public Money plus(Money addition) {
-        Money newMoney = new Money(addition.euros + euros(), addition.cents() + cents()); // create a new Money object that has the correct worth
-        // return the new Money object
-        return newMoney;
+        if (addition.cents() + cents() > 99 ) {
+            Money newMoney = new Money(addition.euros + euros() + 1, addition.cents() + cents() - 100);
+            return newMoney;
+        }
+        else {
+            Money newMoney = new Money(addition.euros + euros(), addition.cents() + cents());
+            return newMoney;
+        }
+        
     }
 
     public boolean lessThan(Money compared) {
@@ -54,4 +60,5 @@ public class Money {
         }
         return new Money(newEuros, newCents);
     }
+
 }
