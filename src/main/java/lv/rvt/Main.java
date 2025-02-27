@@ -11,7 +11,8 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
 
-        //PersonManager.run();
+        PersonManager.run();
+        /*
         Money a = new Money(10, 0);
         Money b = new Money(3, 50);
 
@@ -28,5 +29,6 @@ public class Main {
         System.out.println(a);  // 10.00e
         System.out.println(b);  // 3.50e
         System.out.println(c);  // 0.00e
+        */
     }
 }
