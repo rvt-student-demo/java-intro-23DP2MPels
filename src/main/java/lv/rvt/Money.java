@@ -5,6 +5,13 @@ public class Money {
     private final int cents;
 
     public Money(int euros, int cents) {
+        if (euros < 0) {
+            euros = 0;
+            cents = 0;
+        }
+        if (cents < 0) {
+            cents = 0;
+        }
         this.euros = euros;
         this.cents = cents;
     }
